@@ -1,16 +1,10 @@
 
-variable "route_table_id" {
-  
+variable vpc_id {
 }
 
-variable "dest_cidr" {
-  
+variable route_table_name {
 }
 
-variable "nat_gateway_id" {
-  
+variable subnet_id {
 }
 
-variable "internet_gateway_id" {
-  
-}
