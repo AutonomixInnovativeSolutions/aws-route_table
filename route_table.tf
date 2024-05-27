@@ -10,7 +10,7 @@ resource "aws_route_table" "rt" {
 }
 
 resource "aws_route_table_association" "a" {
-for_each = toset(for subnet in var.subnet_id: subnet )
+for_each = toset([for subnet in var.subnet_id: subnet] )
   subnet_id      = each.value
   route_table_id = aws_route_table.rt.id
 }
